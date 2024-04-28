@@ -10,8 +10,8 @@ body {
   min-width: 100vw;
   display: flex;
   flex-direction: column;
-  background-color: #bdc6ae;
-  color: #4a6267;
+  background-color: #4a6267;
+  color: #bdc6ae;
 }
 header,
 body,
@@ -45,6 +45,7 @@ img {
   left: 0;
   top: 0;
   width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 #images-container {
   width: 200px;
@@ -59,4 +60,30 @@ img {
   left: 0;
   width: 100%;
   transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+#buttons-container {
+  position: relative;
+  width: 80%;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-weight: 550;
+  color: #4a6267;
+  background-color: #bdc6ae;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: -30px;
+}
+button:hover {
+  filter: brightness(1.5);
+}
+#prev-btn {
+  left: 20%;
+}
+#next-btn {
+  right: 20%;
 }
