@@ -91,3 +91,8 @@ button:hover {
 #next-btn {
   right: 20%;
 }
+@media screen and (max-width: 400px) {
+  #buttons-container {
+    width: 100%;
+  }
+}
