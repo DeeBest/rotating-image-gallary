@@ -7,14 +7,17 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 
 let rotationDeg = 0;
+let timer;
 
 prevBtn.addEventListener('click', () => {
-  rotationDeg = rotationDeg + 45;
+  rotationDeg = rotationDeg - 45;
+  clearTimeout(timer);
   updateGallery();
 });
 
 nextBtn.addEventListener('click', () => {
-  rotationDeg = rotationDeg - 45;
+  rotationDeg = rotationDeg + 45;
+  clearTimeout(timer);
   updateGallery();
 });
 
@@ -23,7 +26,7 @@ updateGallery();
 function updateGallery() {
   imagesContainer.style.transform = `perspective(1000px) rotateY(${rotationDeg}deg)`;
 
-  setTimeout(() => {
+  timer = setTimeout(() => {
     rotationDeg = rotationDeg + 45;
     updateGallery();
   }, 5000);
