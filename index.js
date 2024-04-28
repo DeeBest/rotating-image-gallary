@@ -18,6 +18,13 @@ nextBtn.addEventListener('click', () => {
   updateGallery();
 });
 
+updateGallery();
+
 function updateGallery() {
   imagesContainer.style.transform = `perspective(1000px) rotateY(${rotationDeg}deg)`;
+
+  setTimeout(() => {
+    rotationDeg = rotationDeg + 45;
+    updateGallery();
+  }, 5000);
 }
