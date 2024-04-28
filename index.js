@@ -12,3 +12,12 @@ prevBtn.addEventListener('click', () => {
   rotationDeg = rotationDeg + 45;
   updateGallery();
 });
+
+nextBtn.addEventListener('click', () => {
+  rotationDeg = rotationDeg - 45;
+  updateGallery();
+});
+
+function updateGallery() {
+  imagesContainer.style.transform = `perspective(1000px) rotateY(${rotationDeg}deg)`;
+}
